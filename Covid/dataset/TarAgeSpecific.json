@@ -1,0 +1,25 @@
+{
+	"name": "TarAgeSpecific",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "CnxDataLake",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Destination"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureDataLakeStoreLocation",
+				"folderPath": "rawData/europe"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": false,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
