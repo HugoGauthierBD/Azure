@@ -2,11 +2,11 @@
 	"name": "trigger1",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Started",
+		"runtimeState": "Stopped",
 		"pipelines": [
 			{
 				"pipelineReference": {
-					"referenceName": "Data Ingestion",
+					"referenceName": "Data Ingestion Europe",
 					"type": "PipelineReference"
 				}
 			}
