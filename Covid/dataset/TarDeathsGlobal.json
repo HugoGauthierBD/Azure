@@ -13,7 +13,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureDataLakeStoreLocation",
-				"folderPath": "rawData/hopkins"
+				"folderPath": "rawData/johnhopkins"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
