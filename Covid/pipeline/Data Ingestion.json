@@ -48,9 +48,9 @@
 									"physicalType": "String"
 								},
 								"sink": {
+									"name": "country",
 									"type": "String",
-									"physicalType": "String",
-									"ordinal": 1
+									"physicalType": "String"
 								}
 							},
 							{
@@ -60,9 +60,9 @@
 									"physicalType": "String"
 								},
 								"sink": {
+									"name": "region_name",
 									"type": "String",
-									"physicalType": "String",
-									"ordinal": 2
+									"physicalType": "String"
 								}
 							},
 							{
@@ -72,9 +72,9 @@
 									"physicalType": "String"
 								},
 								"sink": {
+									"name": "nuts_code",
 									"type": "String",
-									"physicalType": "String",
-									"ordinal": 3
+									"physicalType": "String"
 								}
 							},
 							{
@@ -84,9 +84,9 @@
 									"physicalType": "String"
 								},
 								"sink": {
+									"name": "date",
 									"type": "String",
-									"physicalType": "String",
-									"ordinal": 4
+									"physicalType": "String"
 								}
 							},
 							{
@@ -96,9 +96,9 @@
 									"physicalType": "String"
 								},
 								"sink": {
+									"name": "rate_14_day_per_100k",
 									"type": "String",
-									"physicalType": "String",
-									"ordinal": 5
+									"physicalType": "String"
 								}
 							},
 							{
@@ -108,9 +108,9 @@
 									"physicalType": "String"
 								},
 								"sink": {
+									"name": "source",
 									"type": "String",
-									"physicalType": "String",
-									"ordinal": 6
+									"physicalType": "String"
 								}
 							}
 						],
