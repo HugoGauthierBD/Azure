@@ -241,6 +241,96 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/TarConfirmedGlobal')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "CnxDataLake",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "Destination"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureDataLakeStoreLocation",
+						"folderPath": "rawData/johnhopkins"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/CnxDataLake')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/TarDeathsGlobal')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "CnxDataLake",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "Destination"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureDataLakeStoreLocation",
+						"folderPath": "rawData/johnhopkins"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/CnxDataLake')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/TarRecoveredGlobal')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "CnxDataLake",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "Destination"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureDataLakeStoreLocation",
+						"folderPath": "rawData/johnhopkins"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/CnxDataLake')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/SrcDailySubNational')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -532,7 +622,4447 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/Data Ingestion')]",
+			"name": "[concat(parameters('factoryName'), '/SrcConfirmedGlobal')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "CnxLocalFile",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "Sources"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "FileServerLocation",
+						"fileName": "time_series_covid19_confirmed_global.csv",
+						"folderPath": "hopkins"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "Prop_0",
+						"type": "String"
+					},
+					{
+						"name": "Prop_1",
+						"type": "String"
+					},
+					{
+						"name": "Prop_2",
+						"type": "String"
+					},
+					{
+						"name": "Prop_3",
+						"type": "String"
+					},
+					{
+						"name": "Prop_4",
+						"type": "String"
+					},
+					{
+						"name": "Prop_5",
+						"type": "String"
+					},
+					{
+						"name": "Prop_6",
+						"type": "String"
+					},
+					{
+						"name": "Prop_7",
+						"type": "String"
+					},
+					{
+						"name": "Prop_8",
+						"type": "String"
+					},
+					{
+						"name": "Prop_9",
+						"type": "String"
+					},
+					{
+						"name": "Prop_10",
+						"type": "String"
+					},
+					{
+						"name": "Prop_11",
+						"type": "String"
+					},
+					{
+						"name": "Prop_12",
+						"type": "String"
+					},
+					{
+						"name": "Prop_13",
+						"type": "String"
+					},
+					{
+						"name": "Prop_14",
+						"type": "String"
+					},
+					{
+						"name": "Prop_15",
+						"type": "String"
+					},
+					{
+						"name": "Prop_16",
+						"type": "String"
+					},
+					{
+						"name": "Prop_17",
+						"type": "String"
+					},
+					{
+						"name": "Prop_18",
+						"type": "String"
+					},
+					{
+						"name": "Prop_19",
+						"type": "String"
+					},
+					{
+						"name": "Prop_20",
+						"type": "String"
+					},
+					{
+						"name": "Prop_21",
+						"type": "String"
+					},
+					{
+						"name": "Prop_22",
+						"type": "String"
+					},
+					{
+						"name": "Prop_23",
+						"type": "String"
+					},
+					{
+						"name": "Prop_24",
+						"type": "String"
+					},
+					{
+						"name": "Prop_25",
+						"type": "String"
+					},
+					{
+						"name": "Prop_26",
+						"type": "String"
+					},
+					{
+						"name": "Prop_27",
+						"type": "String"
+					},
+					{
+						"name": "Prop_28",
+						"type": "String"
+					},
+					{
+						"name": "Prop_29",
+						"type": "String"
+					},
+					{
+						"name": "Prop_30",
+						"type": "String"
+					},
+					{
+						"name": "Prop_31",
+						"type": "String"
+					},
+					{
+						"name": "Prop_32",
+						"type": "String"
+					},
+					{
+						"name": "Prop_33",
+						"type": "String"
+					},
+					{
+						"name": "Prop_34",
+						"type": "String"
+					},
+					{
+						"name": "Prop_35",
+						"type": "String"
+					},
+					{
+						"name": "Prop_36",
+						"type": "String"
+					},
+					{
+						"name": "Prop_37",
+						"type": "String"
+					},
+					{
+						"name": "Prop_38",
+						"type": "String"
+					},
+					{
+						"name": "Prop_39",
+						"type": "String"
+					},
+					{
+						"name": "Prop_40",
+						"type": "String"
+					},
+					{
+						"name": "Prop_41",
+						"type": "String"
+					},
+					{
+						"name": "Prop_42",
+						"type": "String"
+					},
+					{
+						"name": "Prop_43",
+						"type": "String"
+					},
+					{
+						"name": "Prop_44",
+						"type": "String"
+					},
+					{
+						"name": "Prop_45",
+						"type": "String"
+					},
+					{
+						"name": "Prop_46",
+						"type": "String"
+					},
+					{
+						"name": "Prop_47",
+						"type": "String"
+					},
+					{
+						"name": "Prop_48",
+						"type": "String"
+					},
+					{
+						"name": "Prop_49",
+						"type": "String"
+					},
+					{
+						"name": "Prop_50",
+						"type": "String"
+					},
+					{
+						"name": "Prop_51",
+						"type": "String"
+					},
+					{
+						"name": "Prop_52",
+						"type": "String"
+					},
+					{
+						"name": "Prop_53",
+						"type": "String"
+					},
+					{
+						"name": "Prop_54",
+						"type": "String"
+					},
+					{
+						"name": "Prop_55",
+						"type": "String"
+					},
+					{
+						"name": "Prop_56",
+						"type": "String"
+					},
+					{
+						"name": "Prop_57",
+						"type": "String"
+					},
+					{
+						"name": "Prop_58",
+						"type": "String"
+					},
+					{
+						"name": "Prop_59",
+						"type": "String"
+					},
+					{
+						"name": "Prop_60",
+						"type": "String"
+					},
+					{
+						"name": "Prop_61",
+						"type": "String"
+					},
+					{
+						"name": "Prop_62",
+						"type": "String"
+					},
+					{
+						"name": "Prop_63",
+						"type": "String"
+					},
+					{
+						"name": "Prop_64",
+						"type": "String"
+					},
+					{
+						"name": "Prop_65",
+						"type": "String"
+					},
+					{
+						"name": "Prop_66",
+						"type": "String"
+					},
+					{
+						"name": "Prop_67",
+						"type": "String"
+					},
+					{
+						"name": "Prop_68",
+						"type": "String"
+					},
+					{
+						"name": "Prop_69",
+						"type": "String"
+					},
+					{
+						"name": "Prop_70",
+						"type": "String"
+					},
+					{
+						"name": "Prop_71",
+						"type": "String"
+					},
+					{
+						"name": "Prop_72",
+						"type": "String"
+					},
+					{
+						"name": "Prop_73",
+						"type": "String"
+					},
+					{
+						"name": "Prop_74",
+						"type": "String"
+					},
+					{
+						"name": "Prop_75",
+						"type": "String"
+					},
+					{
+						"name": "Prop_76",
+						"type": "String"
+					},
+					{
+						"name": "Prop_77",
+						"type": "String"
+					},
+					{
+						"name": "Prop_78",
+						"type": "String"
+					},
+					{
+						"name": "Prop_79",
+						"type": "String"
+					},
+					{
+						"name": "Prop_80",
+						"type": "String"
+					},
+					{
+						"name": "Prop_81",
+						"type": "String"
+					},
+					{
+						"name": "Prop_82",
+						"type": "String"
+					},
+					{
+						"name": "Prop_83",
+						"type": "String"
+					},
+					{
+						"name": "Prop_84",
+						"type": "String"
+					},
+					{
+						"name": "Prop_85",
+						"type": "String"
+					},
+					{
+						"name": "Prop_86",
+						"type": "String"
+					},
+					{
+						"name": "Prop_87",
+						"type": "String"
+					},
+					{
+						"name": "Prop_88",
+						"type": "String"
+					},
+					{
+						"name": "Prop_89",
+						"type": "String"
+					},
+					{
+						"name": "Prop_90",
+						"type": "String"
+					},
+					{
+						"name": "Prop_91",
+						"type": "String"
+					},
+					{
+						"name": "Prop_92",
+						"type": "String"
+					},
+					{
+						"name": "Prop_93",
+						"type": "String"
+					},
+					{
+						"name": "Prop_94",
+						"type": "String"
+					},
+					{
+						"name": "Prop_95",
+						"type": "String"
+					},
+					{
+						"name": "Prop_96",
+						"type": "String"
+					},
+					{
+						"name": "Prop_97",
+						"type": "String"
+					},
+					{
+						"name": "Prop_98",
+						"type": "String"
+					},
+					{
+						"name": "Prop_99",
+						"type": "String"
+					},
+					{
+						"name": "Prop_100",
+						"type": "String"
+					},
+					{
+						"name": "Prop_101",
+						"type": "String"
+					},
+					{
+						"name": "Prop_102",
+						"type": "String"
+					},
+					{
+						"name": "Prop_103",
+						"type": "String"
+					},
+					{
+						"name": "Prop_104",
+						"type": "String"
+					},
+					{
+						"name": "Prop_105",
+						"type": "String"
+					},
+					{
+						"name": "Prop_106",
+						"type": "String"
+					},
+					{
+						"name": "Prop_107",
+						"type": "String"
+					},
+					{
+						"name": "Prop_108",
+						"type": "String"
+					},
+					{
+						"name": "Prop_109",
+						"type": "String"
+					},
+					{
+						"name": "Prop_110",
+						"type": "String"
+					},
+					{
+						"name": "Prop_111",
+						"type": "String"
+					},
+					{
+						"name": "Prop_112",
+						"type": "String"
+					},
+					{
+						"name": "Prop_113",
+						"type": "String"
+					},
+					{
+						"name": "Prop_114",
+						"type": "String"
+					},
+					{
+						"name": "Prop_115",
+						"type": "String"
+					},
+					{
+						"name": "Prop_116",
+						"type": "String"
+					},
+					{
+						"name": "Prop_117",
+						"type": "String"
+					},
+					{
+						"name": "Prop_118",
+						"type": "String"
+					},
+					{
+						"name": "Prop_119",
+						"type": "String"
+					},
+					{
+						"name": "Prop_120",
+						"type": "String"
+					},
+					{
+						"name": "Prop_121",
+						"type": "String"
+					},
+					{
+						"name": "Prop_122",
+						"type": "String"
+					},
+					{
+						"name": "Prop_123",
+						"type": "String"
+					},
+					{
+						"name": "Prop_124",
+						"type": "String"
+					},
+					{
+						"name": "Prop_125",
+						"type": "String"
+					},
+					{
+						"name": "Prop_126",
+						"type": "String"
+					},
+					{
+						"name": "Prop_127",
+						"type": "String"
+					},
+					{
+						"name": "Prop_128",
+						"type": "String"
+					},
+					{
+						"name": "Prop_129",
+						"type": "String"
+					},
+					{
+						"name": "Prop_130",
+						"type": "String"
+					},
+					{
+						"name": "Prop_131",
+						"type": "String"
+					},
+					{
+						"name": "Prop_132",
+						"type": "String"
+					},
+					{
+						"name": "Prop_133",
+						"type": "String"
+					},
+					{
+						"name": "Prop_134",
+						"type": "String"
+					},
+					{
+						"name": "Prop_135",
+						"type": "String"
+					},
+					{
+						"name": "Prop_136",
+						"type": "String"
+					},
+					{
+						"name": "Prop_137",
+						"type": "String"
+					},
+					{
+						"name": "Prop_138",
+						"type": "String"
+					},
+					{
+						"name": "Prop_139",
+						"type": "String"
+					},
+					{
+						"name": "Prop_140",
+						"type": "String"
+					},
+					{
+						"name": "Prop_141",
+						"type": "String"
+					},
+					{
+						"name": "Prop_142",
+						"type": "String"
+					},
+					{
+						"name": "Prop_143",
+						"type": "String"
+					},
+					{
+						"name": "Prop_144",
+						"type": "String"
+					},
+					{
+						"name": "Prop_145",
+						"type": "String"
+					},
+					{
+						"name": "Prop_146",
+						"type": "String"
+					},
+					{
+						"name": "Prop_147",
+						"type": "String"
+					},
+					{
+						"name": "Prop_148",
+						"type": "String"
+					},
+					{
+						"name": "Prop_149",
+						"type": "String"
+					},
+					{
+						"name": "Prop_150",
+						"type": "String"
+					},
+					{
+						"name": "Prop_151",
+						"type": "String"
+					},
+					{
+						"name": "Prop_152",
+						"type": "String"
+					},
+					{
+						"name": "Prop_153",
+						"type": "String"
+					},
+					{
+						"name": "Prop_154",
+						"type": "String"
+					},
+					{
+						"name": "Prop_155",
+						"type": "String"
+					},
+					{
+						"name": "Prop_156",
+						"type": "String"
+					},
+					{
+						"name": "Prop_157",
+						"type": "String"
+					},
+					{
+						"name": "Prop_158",
+						"type": "String"
+					},
+					{
+						"name": "Prop_159",
+						"type": "String"
+					},
+					{
+						"name": "Prop_160",
+						"type": "String"
+					},
+					{
+						"name": "Prop_161",
+						"type": "String"
+					},
+					{
+						"name": "Prop_162",
+						"type": "String"
+					},
+					{
+						"name": "Prop_163",
+						"type": "String"
+					},
+					{
+						"name": "Prop_164",
+						"type": "String"
+					},
+					{
+						"name": "Prop_165",
+						"type": "String"
+					},
+					{
+						"name": "Prop_166",
+						"type": "String"
+					},
+					{
+						"name": "Prop_167",
+						"type": "String"
+					},
+					{
+						"name": "Prop_168",
+						"type": "String"
+					},
+					{
+						"name": "Prop_169",
+						"type": "String"
+					},
+					{
+						"name": "Prop_170",
+						"type": "String"
+					},
+					{
+						"name": "Prop_171",
+						"type": "String"
+					},
+					{
+						"name": "Prop_172",
+						"type": "String"
+					},
+					{
+						"name": "Prop_173",
+						"type": "String"
+					},
+					{
+						"name": "Prop_174",
+						"type": "String"
+					},
+					{
+						"name": "Prop_175",
+						"type": "String"
+					},
+					{
+						"name": "Prop_176",
+						"type": "String"
+					},
+					{
+						"name": "Prop_177",
+						"type": "String"
+					},
+					{
+						"name": "Prop_178",
+						"type": "String"
+					},
+					{
+						"name": "Prop_179",
+						"type": "String"
+					},
+					{
+						"name": "Prop_180",
+						"type": "String"
+					},
+					{
+						"name": "Prop_181",
+						"type": "String"
+					},
+					{
+						"name": "Prop_182",
+						"type": "String"
+					},
+					{
+						"name": "Prop_183",
+						"type": "String"
+					},
+					{
+						"name": "Prop_184",
+						"type": "String"
+					},
+					{
+						"name": "Prop_185",
+						"type": "String"
+					},
+					{
+						"name": "Prop_186",
+						"type": "String"
+					},
+					{
+						"name": "Prop_187",
+						"type": "String"
+					},
+					{
+						"name": "Prop_188",
+						"type": "String"
+					},
+					{
+						"name": "Prop_189",
+						"type": "String"
+					},
+					{
+						"name": "Prop_190",
+						"type": "String"
+					},
+					{
+						"name": "Prop_191",
+						"type": "String"
+					},
+					{
+						"name": "Prop_192",
+						"type": "String"
+					},
+					{
+						"name": "Prop_193",
+						"type": "String"
+					},
+					{
+						"name": "Prop_194",
+						"type": "String"
+					},
+					{
+						"name": "Prop_195",
+						"type": "String"
+					},
+					{
+						"name": "Prop_196",
+						"type": "String"
+					},
+					{
+						"name": "Prop_197",
+						"type": "String"
+					},
+					{
+						"name": "Prop_198",
+						"type": "String"
+					},
+					{
+						"name": "Prop_199",
+						"type": "String"
+					},
+					{
+						"name": "Prop_200",
+						"type": "String"
+					},
+					{
+						"name": "Prop_201",
+						"type": "String"
+					},
+					{
+						"name": "Prop_202",
+						"type": "String"
+					},
+					{
+						"name": "Prop_203",
+						"type": "String"
+					},
+					{
+						"name": "Prop_204",
+						"type": "String"
+					},
+					{
+						"name": "Prop_205",
+						"type": "String"
+					},
+					{
+						"name": "Prop_206",
+						"type": "String"
+					},
+					{
+						"name": "Prop_207",
+						"type": "String"
+					},
+					{
+						"name": "Prop_208",
+						"type": "String"
+					},
+					{
+						"name": "Prop_209",
+						"type": "String"
+					},
+					{
+						"name": "Prop_210",
+						"type": "String"
+					},
+					{
+						"name": "Prop_211",
+						"type": "String"
+					},
+					{
+						"name": "Prop_212",
+						"type": "String"
+					},
+					{
+						"name": "Prop_213",
+						"type": "String"
+					},
+					{
+						"name": "Prop_214",
+						"type": "String"
+					},
+					{
+						"name": "Prop_215",
+						"type": "String"
+					},
+					{
+						"name": "Prop_216",
+						"type": "String"
+					},
+					{
+						"name": "Prop_217",
+						"type": "String"
+					},
+					{
+						"name": "Prop_218",
+						"type": "String"
+					},
+					{
+						"name": "Prop_219",
+						"type": "String"
+					},
+					{
+						"name": "Prop_220",
+						"type": "String"
+					},
+					{
+						"name": "Prop_221",
+						"type": "String"
+					},
+					{
+						"name": "Prop_222",
+						"type": "String"
+					},
+					{
+						"name": "Prop_223",
+						"type": "String"
+					},
+					{
+						"name": "Prop_224",
+						"type": "String"
+					},
+					{
+						"name": "Prop_225",
+						"type": "String"
+					},
+					{
+						"name": "Prop_226",
+						"type": "String"
+					},
+					{
+						"name": "Prop_227",
+						"type": "String"
+					},
+					{
+						"name": "Prop_228",
+						"type": "String"
+					},
+					{
+						"name": "Prop_229",
+						"type": "String"
+					},
+					{
+						"name": "Prop_230",
+						"type": "String"
+					},
+					{
+						"name": "Prop_231",
+						"type": "String"
+					},
+					{
+						"name": "Prop_232",
+						"type": "String"
+					},
+					{
+						"name": "Prop_233",
+						"type": "String"
+					},
+					{
+						"name": "Prop_234",
+						"type": "String"
+					},
+					{
+						"name": "Prop_235",
+						"type": "String"
+					},
+					{
+						"name": "Prop_236",
+						"type": "String"
+					},
+					{
+						"name": "Prop_237",
+						"type": "String"
+					},
+					{
+						"name": "Prop_238",
+						"type": "String"
+					},
+					{
+						"name": "Prop_239",
+						"type": "String"
+					},
+					{
+						"name": "Prop_240",
+						"type": "String"
+					},
+					{
+						"name": "Prop_241",
+						"type": "String"
+					},
+					{
+						"name": "Prop_242",
+						"type": "String"
+					},
+					{
+						"name": "Prop_243",
+						"type": "String"
+					},
+					{
+						"name": "Prop_244",
+						"type": "String"
+					},
+					{
+						"name": "Prop_245",
+						"type": "String"
+					},
+					{
+						"name": "Prop_246",
+						"type": "String"
+					},
+					{
+						"name": "Prop_247",
+						"type": "String"
+					},
+					{
+						"name": "Prop_248",
+						"type": "String"
+					},
+					{
+						"name": "Prop_249",
+						"type": "String"
+					},
+					{
+						"name": "Prop_250",
+						"type": "String"
+					},
+					{
+						"name": "Prop_251",
+						"type": "String"
+					},
+					{
+						"name": "Prop_252",
+						"type": "String"
+					},
+					{
+						"name": "Prop_253",
+						"type": "String"
+					},
+					{
+						"name": "Prop_254",
+						"type": "String"
+					},
+					{
+						"name": "Prop_255",
+						"type": "String"
+					},
+					{
+						"name": "Prop_256",
+						"type": "String"
+					},
+					{
+						"name": "Prop_257",
+						"type": "String"
+					},
+					{
+						"name": "Prop_258",
+						"type": "String"
+					},
+					{
+						"name": "Prop_259",
+						"type": "String"
+					},
+					{
+						"name": "Prop_260",
+						"type": "String"
+					},
+					{
+						"name": "Prop_261",
+						"type": "String"
+					},
+					{
+						"name": "Prop_262",
+						"type": "String"
+					},
+					{
+						"name": "Prop_263",
+						"type": "String"
+					},
+					{
+						"name": "Prop_264",
+						"type": "String"
+					},
+					{
+						"name": "Prop_265",
+						"type": "String"
+					},
+					{
+						"name": "Prop_266",
+						"type": "String"
+					},
+					{
+						"name": "Prop_267",
+						"type": "String"
+					},
+					{
+						"name": "Prop_268",
+						"type": "String"
+					},
+					{
+						"name": "Prop_269",
+						"type": "String"
+					},
+					{
+						"name": "Prop_270",
+						"type": "String"
+					},
+					{
+						"name": "Prop_271",
+						"type": "String"
+					},
+					{
+						"name": "Prop_272",
+						"type": "String"
+					},
+					{
+						"name": "Prop_273",
+						"type": "String"
+					},
+					{
+						"name": "Prop_274",
+						"type": "String"
+					},
+					{
+						"name": "Prop_275",
+						"type": "String"
+					},
+					{
+						"name": "Prop_276",
+						"type": "String"
+					},
+					{
+						"name": "Prop_277",
+						"type": "String"
+					},
+					{
+						"name": "Prop_278",
+						"type": "String"
+					},
+					{
+						"name": "Prop_279",
+						"type": "String"
+					},
+					{
+						"name": "Prop_280",
+						"type": "String"
+					},
+					{
+						"name": "Prop_281",
+						"type": "String"
+					},
+					{
+						"name": "Prop_282",
+						"type": "String"
+					},
+					{
+						"name": "Prop_283",
+						"type": "String"
+					},
+					{
+						"name": "Prop_284",
+						"type": "String"
+					},
+					{
+						"name": "Prop_285",
+						"type": "String"
+					},
+					{
+						"name": "Prop_286",
+						"type": "String"
+					},
+					{
+						"name": "Prop_287",
+						"type": "String"
+					},
+					{
+						"name": "Prop_288",
+						"type": "String"
+					},
+					{
+						"name": "Prop_289",
+						"type": "String"
+					},
+					{
+						"name": "Prop_290",
+						"type": "String"
+					},
+					{
+						"name": "Prop_291",
+						"type": "String"
+					},
+					{
+						"name": "Prop_292",
+						"type": "String"
+					},
+					{
+						"name": "Prop_293",
+						"type": "String"
+					},
+					{
+						"name": "Prop_294",
+						"type": "String"
+					},
+					{
+						"name": "Prop_295",
+						"type": "String"
+					},
+					{
+						"name": "Prop_296",
+						"type": "String"
+					},
+					{
+						"name": "Prop_297",
+						"type": "String"
+					},
+					{
+						"name": "Prop_298",
+						"type": "String"
+					},
+					{
+						"name": "Prop_299",
+						"type": "String"
+					},
+					{
+						"name": "Prop_300",
+						"type": "String"
+					},
+					{
+						"name": "Prop_301",
+						"type": "String"
+					},
+					{
+						"name": "Prop_302",
+						"type": "String"
+					},
+					{
+						"name": "Prop_303",
+						"type": "String"
+					},
+					{
+						"name": "Prop_304",
+						"type": "String"
+					},
+					{
+						"name": "Prop_305",
+						"type": "String"
+					},
+					{
+						"name": "Prop_306",
+						"type": "String"
+					},
+					{
+						"name": "Prop_307",
+						"type": "String"
+					},
+					{
+						"name": "Prop_308",
+						"type": "String"
+					},
+					{
+						"name": "Prop_309",
+						"type": "String"
+					},
+					{
+						"name": "Prop_310",
+						"type": "String"
+					},
+					{
+						"name": "Prop_311",
+						"type": "String"
+					},
+					{
+						"name": "Prop_312",
+						"type": "String"
+					},
+					{
+						"name": "Prop_313",
+						"type": "String"
+					},
+					{
+						"name": "Prop_314",
+						"type": "String"
+					},
+					{
+						"name": "Prop_315",
+						"type": "String"
+					},
+					{
+						"name": "Prop_316",
+						"type": "String"
+					},
+					{
+						"name": "Prop_317",
+						"type": "String"
+					},
+					{
+						"name": "Prop_318",
+						"type": "String"
+					},
+					{
+						"name": "Prop_319",
+						"type": "String"
+					},
+					{
+						"name": "Prop_320",
+						"type": "String"
+					},
+					{
+						"name": "Prop_321",
+						"type": "String"
+					},
+					{
+						"name": "Prop_322",
+						"type": "String"
+					},
+					{
+						"name": "Prop_323",
+						"type": "String"
+					},
+					{
+						"name": "Prop_324",
+						"type": "String"
+					},
+					{
+						"name": "Prop_325",
+						"type": "String"
+					},
+					{
+						"name": "Prop_326",
+						"type": "String"
+					},
+					{
+						"name": "Prop_327",
+						"type": "String"
+					},
+					{
+						"name": "Prop_328",
+						"type": "String"
+					},
+					{
+						"name": "Prop_329",
+						"type": "String"
+					},
+					{
+						"name": "Prop_330",
+						"type": "String"
+					},
+					{
+						"name": "Prop_331",
+						"type": "String"
+					},
+					{
+						"name": "Prop_332",
+						"type": "String"
+					},
+					{
+						"name": "Prop_333",
+						"type": "String"
+					},
+					{
+						"name": "Prop_334",
+						"type": "String"
+					},
+					{
+						"name": "Prop_335",
+						"type": "String"
+					},
+					{
+						"name": "Prop_336",
+						"type": "String"
+					},
+					{
+						"name": "Prop_337",
+						"type": "String"
+					},
+					{
+						"name": "Prop_338",
+						"type": "String"
+					},
+					{
+						"name": "Prop_339",
+						"type": "String"
+					},
+					{
+						"name": "Prop_340",
+						"type": "String"
+					},
+					{
+						"name": "Prop_341",
+						"type": "String"
+					},
+					{
+						"name": "Prop_342",
+						"type": "String"
+					},
+					{
+						"name": "Prop_343",
+						"type": "String"
+					},
+					{
+						"name": "Prop_344",
+						"type": "String"
+					},
+					{
+						"name": "Prop_345",
+						"type": "String"
+					},
+					{
+						"name": "Prop_346",
+						"type": "String"
+					},
+					{
+						"name": "Prop_347",
+						"type": "String"
+					},
+					{
+						"name": "Prop_348",
+						"type": "String"
+					},
+					{
+						"name": "Prop_349",
+						"type": "String"
+					},
+					{
+						"name": "Prop_350",
+						"type": "String"
+					},
+					{
+						"name": "Prop_351",
+						"type": "String"
+					},
+					{
+						"name": "Prop_352",
+						"type": "String"
+					},
+					{
+						"name": "Prop_353",
+						"type": "String"
+					},
+					{
+						"name": "Prop_354",
+						"type": "String"
+					},
+					{
+						"name": "Prop_355",
+						"type": "String"
+					},
+					{
+						"name": "Prop_356",
+						"type": "String"
+					},
+					{
+						"name": "Prop_357",
+						"type": "String"
+					},
+					{
+						"name": "Prop_358",
+						"type": "String"
+					},
+					{
+						"name": "Prop_359",
+						"type": "String"
+					},
+					{
+						"name": "Prop_360",
+						"type": "String"
+					},
+					{
+						"name": "Prop_361",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/CnxLocalFile')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SrcDeathsGlobal')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "CnxLocalFile",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "Sources"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "FileServerLocation",
+						"fileName": "time_series_covid19_deaths_global.csv",
+						"folderPath": "hopkins"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "Province/State",
+						"type": "String"
+					},
+					{
+						"name": "Country/Region",
+						"type": "String"
+					},
+					{
+						"name": "Lat",
+						"type": "String"
+					},
+					{
+						"name": "Long",
+						"type": "String"
+					},
+					{
+						"name": "1/22/20",
+						"type": "String"
+					},
+					{
+						"name": "1/23/20",
+						"type": "String"
+					},
+					{
+						"name": "1/24/20",
+						"type": "String"
+					},
+					{
+						"name": "1/25/20",
+						"type": "String"
+					},
+					{
+						"name": "1/26/20",
+						"type": "String"
+					},
+					{
+						"name": "1/27/20",
+						"type": "String"
+					},
+					{
+						"name": "1/28/20",
+						"type": "String"
+					},
+					{
+						"name": "1/29/20",
+						"type": "String"
+					},
+					{
+						"name": "1/30/20",
+						"type": "String"
+					},
+					{
+						"name": "1/31/20",
+						"type": "String"
+					},
+					{
+						"name": "2/1/20",
+						"type": "String"
+					},
+					{
+						"name": "2/2/20",
+						"type": "String"
+					},
+					{
+						"name": "2/3/20",
+						"type": "String"
+					},
+					{
+						"name": "2/4/20",
+						"type": "String"
+					},
+					{
+						"name": "2/5/20",
+						"type": "String"
+					},
+					{
+						"name": "2/6/20",
+						"type": "String"
+					},
+					{
+						"name": "2/7/20",
+						"type": "String"
+					},
+					{
+						"name": "2/8/20",
+						"type": "String"
+					},
+					{
+						"name": "2/9/20",
+						"type": "String"
+					},
+					{
+						"name": "2/10/20",
+						"type": "String"
+					},
+					{
+						"name": "2/11/20",
+						"type": "String"
+					},
+					{
+						"name": "2/12/20",
+						"type": "String"
+					},
+					{
+						"name": "2/13/20",
+						"type": "String"
+					},
+					{
+						"name": "2/14/20",
+						"type": "String"
+					},
+					{
+						"name": "2/15/20",
+						"type": "String"
+					},
+					{
+						"name": "2/16/20",
+						"type": "String"
+					},
+					{
+						"name": "2/17/20",
+						"type": "String"
+					},
+					{
+						"name": "2/18/20",
+						"type": "String"
+					},
+					{
+						"name": "2/19/20",
+						"type": "String"
+					},
+					{
+						"name": "2/20/20",
+						"type": "String"
+					},
+					{
+						"name": "2/21/20",
+						"type": "String"
+					},
+					{
+						"name": "2/22/20",
+						"type": "String"
+					},
+					{
+						"name": "2/23/20",
+						"type": "String"
+					},
+					{
+						"name": "2/24/20",
+						"type": "String"
+					},
+					{
+						"name": "2/25/20",
+						"type": "String"
+					},
+					{
+						"name": "2/26/20",
+						"type": "String"
+					},
+					{
+						"name": "2/27/20",
+						"type": "String"
+					},
+					{
+						"name": "2/28/20",
+						"type": "String"
+					},
+					{
+						"name": "2/29/20",
+						"type": "String"
+					},
+					{
+						"name": "3/1/20",
+						"type": "String"
+					},
+					{
+						"name": "3/2/20",
+						"type": "String"
+					},
+					{
+						"name": "3/3/20",
+						"type": "String"
+					},
+					{
+						"name": "3/4/20",
+						"type": "String"
+					},
+					{
+						"name": "3/5/20",
+						"type": "String"
+					},
+					{
+						"name": "3/6/20",
+						"type": "String"
+					},
+					{
+						"name": "3/7/20",
+						"type": "String"
+					},
+					{
+						"name": "3/8/20",
+						"type": "String"
+					},
+					{
+						"name": "3/9/20",
+						"type": "String"
+					},
+					{
+						"name": "3/10/20",
+						"type": "String"
+					},
+					{
+						"name": "3/11/20",
+						"type": "String"
+					},
+					{
+						"name": "3/12/20",
+						"type": "String"
+					},
+					{
+						"name": "3/13/20",
+						"type": "String"
+					},
+					{
+						"name": "3/14/20",
+						"type": "String"
+					},
+					{
+						"name": "3/15/20",
+						"type": "String"
+					},
+					{
+						"name": "3/16/20",
+						"type": "String"
+					},
+					{
+						"name": "3/17/20",
+						"type": "String"
+					},
+					{
+						"name": "3/18/20",
+						"type": "String"
+					},
+					{
+						"name": "3/19/20",
+						"type": "String"
+					},
+					{
+						"name": "3/20/20",
+						"type": "String"
+					},
+					{
+						"name": "3/21/20",
+						"type": "String"
+					},
+					{
+						"name": "3/22/20",
+						"type": "String"
+					},
+					{
+						"name": "3/23/20",
+						"type": "String"
+					},
+					{
+						"name": "3/24/20",
+						"type": "String"
+					},
+					{
+						"name": "3/25/20",
+						"type": "String"
+					},
+					{
+						"name": "3/26/20",
+						"type": "String"
+					},
+					{
+						"name": "3/27/20",
+						"type": "String"
+					},
+					{
+						"name": "3/28/20",
+						"type": "String"
+					},
+					{
+						"name": "3/29/20",
+						"type": "String"
+					},
+					{
+						"name": "3/30/20",
+						"type": "String"
+					},
+					{
+						"name": "3/31/20",
+						"type": "String"
+					},
+					{
+						"name": "4/1/20",
+						"type": "String"
+					},
+					{
+						"name": "4/2/20",
+						"type": "String"
+					},
+					{
+						"name": "4/3/20",
+						"type": "String"
+					},
+					{
+						"name": "4/4/20",
+						"type": "String"
+					},
+					{
+						"name": "4/5/20",
+						"type": "String"
+					},
+					{
+						"name": "4/6/20",
+						"type": "String"
+					},
+					{
+						"name": "4/7/20",
+						"type": "String"
+					},
+					{
+						"name": "4/8/20",
+						"type": "String"
+					},
+					{
+						"name": "4/9/20",
+						"type": "String"
+					},
+					{
+						"name": "4/10/20",
+						"type": "String"
+					},
+					{
+						"name": "4/11/20",
+						"type": "String"
+					},
+					{
+						"name": "4/12/20",
+						"type": "String"
+					},
+					{
+						"name": "4/13/20",
+						"type": "String"
+					},
+					{
+						"name": "4/14/20",
+						"type": "String"
+					},
+					{
+						"name": "4/15/20",
+						"type": "String"
+					},
+					{
+						"name": "4/16/20",
+						"type": "String"
+					},
+					{
+						"name": "4/17/20",
+						"type": "String"
+					},
+					{
+						"name": "4/18/20",
+						"type": "String"
+					},
+					{
+						"name": "4/19/20",
+						"type": "String"
+					},
+					{
+						"name": "4/20/20",
+						"type": "String"
+					},
+					{
+						"name": "4/21/20",
+						"type": "String"
+					},
+					{
+						"name": "4/22/20",
+						"type": "String"
+					},
+					{
+						"name": "4/23/20",
+						"type": "String"
+					},
+					{
+						"name": "4/24/20",
+						"type": "String"
+					},
+					{
+						"name": "4/25/20",
+						"type": "String"
+					},
+					{
+						"name": "4/26/20",
+						"type": "String"
+					},
+					{
+						"name": "4/27/20",
+						"type": "String"
+					},
+					{
+						"name": "4/28/20",
+						"type": "String"
+					},
+					{
+						"name": "4/29/20",
+						"type": "String"
+					},
+					{
+						"name": "4/30/20",
+						"type": "String"
+					},
+					{
+						"name": "5/1/20",
+						"type": "String"
+					},
+					{
+						"name": "5/2/20",
+						"type": "String"
+					},
+					{
+						"name": "5/3/20",
+						"type": "String"
+					},
+					{
+						"name": "5/4/20",
+						"type": "String"
+					},
+					{
+						"name": "5/5/20",
+						"type": "String"
+					},
+					{
+						"name": "5/6/20",
+						"type": "String"
+					},
+					{
+						"name": "5/7/20",
+						"type": "String"
+					},
+					{
+						"name": "5/8/20",
+						"type": "String"
+					},
+					{
+						"name": "5/9/20",
+						"type": "String"
+					},
+					{
+						"name": "5/10/20",
+						"type": "String"
+					},
+					{
+						"name": "5/11/20",
+						"type": "String"
+					},
+					{
+						"name": "5/12/20",
+						"type": "String"
+					},
+					{
+						"name": "5/13/20",
+						"type": "String"
+					},
+					{
+						"name": "5/14/20",
+						"type": "String"
+					},
+					{
+						"name": "5/15/20",
+						"type": "String"
+					},
+					{
+						"name": "5/16/20",
+						"type": "String"
+					},
+					{
+						"name": "5/17/20",
+						"type": "String"
+					},
+					{
+						"name": "5/18/20",
+						"type": "String"
+					},
+					{
+						"name": "5/19/20",
+						"type": "String"
+					},
+					{
+						"name": "5/20/20",
+						"type": "String"
+					},
+					{
+						"name": "5/21/20",
+						"type": "String"
+					},
+					{
+						"name": "5/22/20",
+						"type": "String"
+					},
+					{
+						"name": "5/23/20",
+						"type": "String"
+					},
+					{
+						"name": "5/24/20",
+						"type": "String"
+					},
+					{
+						"name": "5/25/20",
+						"type": "String"
+					},
+					{
+						"name": "5/26/20",
+						"type": "String"
+					},
+					{
+						"name": "5/27/20",
+						"type": "String"
+					},
+					{
+						"name": "5/28/20",
+						"type": "String"
+					},
+					{
+						"name": "5/29/20",
+						"type": "String"
+					},
+					{
+						"name": "5/30/20",
+						"type": "String"
+					},
+					{
+						"name": "5/31/20",
+						"type": "String"
+					},
+					{
+						"name": "6/1/20",
+						"type": "String"
+					},
+					{
+						"name": "6/2/20",
+						"type": "String"
+					},
+					{
+						"name": "6/3/20",
+						"type": "String"
+					},
+					{
+						"name": "6/4/20",
+						"type": "String"
+					},
+					{
+						"name": "6/5/20",
+						"type": "String"
+					},
+					{
+						"name": "6/6/20",
+						"type": "String"
+					},
+					{
+						"name": "6/7/20",
+						"type": "String"
+					},
+					{
+						"name": "6/8/20",
+						"type": "String"
+					},
+					{
+						"name": "6/9/20",
+						"type": "String"
+					},
+					{
+						"name": "6/10/20",
+						"type": "String"
+					},
+					{
+						"name": "6/11/20",
+						"type": "String"
+					},
+					{
+						"name": "6/12/20",
+						"type": "String"
+					},
+					{
+						"name": "6/13/20",
+						"type": "String"
+					},
+					{
+						"name": "6/14/20",
+						"type": "String"
+					},
+					{
+						"name": "6/15/20",
+						"type": "String"
+					},
+					{
+						"name": "6/16/20",
+						"type": "String"
+					},
+					{
+						"name": "6/17/20",
+						"type": "String"
+					},
+					{
+						"name": "6/18/20",
+						"type": "String"
+					},
+					{
+						"name": "6/19/20",
+						"type": "String"
+					},
+					{
+						"name": "6/20/20",
+						"type": "String"
+					},
+					{
+						"name": "6/21/20",
+						"type": "String"
+					},
+					{
+						"name": "6/22/20",
+						"type": "String"
+					},
+					{
+						"name": "6/23/20",
+						"type": "String"
+					},
+					{
+						"name": "6/24/20",
+						"type": "String"
+					},
+					{
+						"name": "6/25/20",
+						"type": "String"
+					},
+					{
+						"name": "6/26/20",
+						"type": "String"
+					},
+					{
+						"name": "6/27/20",
+						"type": "String"
+					},
+					{
+						"name": "6/28/20",
+						"type": "String"
+					},
+					{
+						"name": "6/29/20",
+						"type": "String"
+					},
+					{
+						"name": "6/30/20",
+						"type": "String"
+					},
+					{
+						"name": "7/1/20",
+						"type": "String"
+					},
+					{
+						"name": "7/2/20",
+						"type": "String"
+					},
+					{
+						"name": "7/3/20",
+						"type": "String"
+					},
+					{
+						"name": "7/4/20",
+						"type": "String"
+					},
+					{
+						"name": "7/5/20",
+						"type": "String"
+					},
+					{
+						"name": "7/6/20",
+						"type": "String"
+					},
+					{
+						"name": "7/7/20",
+						"type": "String"
+					},
+					{
+						"name": "7/8/20",
+						"type": "String"
+					},
+					{
+						"name": "7/9/20",
+						"type": "String"
+					},
+					{
+						"name": "7/10/20",
+						"type": "String"
+					},
+					{
+						"name": "7/11/20",
+						"type": "String"
+					},
+					{
+						"name": "7/12/20",
+						"type": "String"
+					},
+					{
+						"name": "7/13/20",
+						"type": "String"
+					},
+					{
+						"name": "7/14/20",
+						"type": "String"
+					},
+					{
+						"name": "7/15/20",
+						"type": "String"
+					},
+					{
+						"name": "7/16/20",
+						"type": "String"
+					},
+					{
+						"name": "7/17/20",
+						"type": "String"
+					},
+					{
+						"name": "7/18/20",
+						"type": "String"
+					},
+					{
+						"name": "7/19/20",
+						"type": "String"
+					},
+					{
+						"name": "7/20/20",
+						"type": "String"
+					},
+					{
+						"name": "7/21/20",
+						"type": "String"
+					},
+					{
+						"name": "7/22/20",
+						"type": "String"
+					},
+					{
+						"name": "7/23/20",
+						"type": "String"
+					},
+					{
+						"name": "7/24/20",
+						"type": "String"
+					},
+					{
+						"name": "7/25/20",
+						"type": "String"
+					},
+					{
+						"name": "7/26/20",
+						"type": "String"
+					},
+					{
+						"name": "7/27/20",
+						"type": "String"
+					},
+					{
+						"name": "7/28/20",
+						"type": "String"
+					},
+					{
+						"name": "7/29/20",
+						"type": "String"
+					},
+					{
+						"name": "7/30/20",
+						"type": "String"
+					},
+					{
+						"name": "7/31/20",
+						"type": "String"
+					},
+					{
+						"name": "8/1/20",
+						"type": "String"
+					},
+					{
+						"name": "8/2/20",
+						"type": "String"
+					},
+					{
+						"name": "8/3/20",
+						"type": "String"
+					},
+					{
+						"name": "8/4/20",
+						"type": "String"
+					},
+					{
+						"name": "8/5/20",
+						"type": "String"
+					},
+					{
+						"name": "8/6/20",
+						"type": "String"
+					},
+					{
+						"name": "8/7/20",
+						"type": "String"
+					},
+					{
+						"name": "8/8/20",
+						"type": "String"
+					},
+					{
+						"name": "8/9/20",
+						"type": "String"
+					},
+					{
+						"name": "8/10/20",
+						"type": "String"
+					},
+					{
+						"name": "8/11/20",
+						"type": "String"
+					},
+					{
+						"name": "8/12/20",
+						"type": "String"
+					},
+					{
+						"name": "8/13/20",
+						"type": "String"
+					},
+					{
+						"name": "8/14/20",
+						"type": "String"
+					},
+					{
+						"name": "8/15/20",
+						"type": "String"
+					},
+					{
+						"name": "8/16/20",
+						"type": "String"
+					},
+					{
+						"name": "8/17/20",
+						"type": "String"
+					},
+					{
+						"name": "8/18/20",
+						"type": "String"
+					},
+					{
+						"name": "8/19/20",
+						"type": "String"
+					},
+					{
+						"name": "8/20/20",
+						"type": "String"
+					},
+					{
+						"name": "8/21/20",
+						"type": "String"
+					},
+					{
+						"name": "8/22/20",
+						"type": "String"
+					},
+					{
+						"name": "8/23/20",
+						"type": "String"
+					},
+					{
+						"name": "8/24/20",
+						"type": "String"
+					},
+					{
+						"name": "8/25/20",
+						"type": "String"
+					},
+					{
+						"name": "8/26/20",
+						"type": "String"
+					},
+					{
+						"name": "8/27/20",
+						"type": "String"
+					},
+					{
+						"name": "8/28/20",
+						"type": "String"
+					},
+					{
+						"name": "8/29/20",
+						"type": "String"
+					},
+					{
+						"name": "8/30/20",
+						"type": "String"
+					},
+					{
+						"name": "8/31/20",
+						"type": "String"
+					},
+					{
+						"name": "9/1/20",
+						"type": "String"
+					},
+					{
+						"name": "9/2/20",
+						"type": "String"
+					},
+					{
+						"name": "9/3/20",
+						"type": "String"
+					},
+					{
+						"name": "9/4/20",
+						"type": "String"
+					},
+					{
+						"name": "9/5/20",
+						"type": "String"
+					},
+					{
+						"name": "9/6/20",
+						"type": "String"
+					},
+					{
+						"name": "9/7/20",
+						"type": "String"
+					},
+					{
+						"name": "9/8/20",
+						"type": "String"
+					},
+					{
+						"name": "9/9/20",
+						"type": "String"
+					},
+					{
+						"name": "9/10/20",
+						"type": "String"
+					},
+					{
+						"name": "9/11/20",
+						"type": "String"
+					},
+					{
+						"name": "9/12/20",
+						"type": "String"
+					},
+					{
+						"name": "9/13/20",
+						"type": "String"
+					},
+					{
+						"name": "9/14/20",
+						"type": "String"
+					},
+					{
+						"name": "9/15/20",
+						"type": "String"
+					},
+					{
+						"name": "9/16/20",
+						"type": "String"
+					},
+					{
+						"name": "9/17/20",
+						"type": "String"
+					},
+					{
+						"name": "9/18/20",
+						"type": "String"
+					},
+					{
+						"name": "9/19/20",
+						"type": "String"
+					},
+					{
+						"name": "9/20/20",
+						"type": "String"
+					},
+					{
+						"name": "9/21/20",
+						"type": "String"
+					},
+					{
+						"name": "9/22/20",
+						"type": "String"
+					},
+					{
+						"name": "9/23/20",
+						"type": "String"
+					},
+					{
+						"name": "9/24/20",
+						"type": "String"
+					},
+					{
+						"name": "9/25/20",
+						"type": "String"
+					},
+					{
+						"name": "9/26/20",
+						"type": "String"
+					},
+					{
+						"name": "9/27/20",
+						"type": "String"
+					},
+					{
+						"name": "9/28/20",
+						"type": "String"
+					},
+					{
+						"name": "9/29/20",
+						"type": "String"
+					},
+					{
+						"name": "9/30/20",
+						"type": "String"
+					},
+					{
+						"name": "10/1/20",
+						"type": "String"
+					},
+					{
+						"name": "10/2/20",
+						"type": "String"
+					},
+					{
+						"name": "10/3/20",
+						"type": "String"
+					},
+					{
+						"name": "10/4/20",
+						"type": "String"
+					},
+					{
+						"name": "10/5/20",
+						"type": "String"
+					},
+					{
+						"name": "10/6/20",
+						"type": "String"
+					},
+					{
+						"name": "10/7/20",
+						"type": "String"
+					},
+					{
+						"name": "10/8/20",
+						"type": "String"
+					},
+					{
+						"name": "10/9/20",
+						"type": "String"
+					},
+					{
+						"name": "10/10/20",
+						"type": "String"
+					},
+					{
+						"name": "10/11/20",
+						"type": "String"
+					},
+					{
+						"name": "10/12/20",
+						"type": "String"
+					},
+					{
+						"name": "10/13/20",
+						"type": "String"
+					},
+					{
+						"name": "10/14/20",
+						"type": "String"
+					},
+					{
+						"name": "10/15/20",
+						"type": "String"
+					},
+					{
+						"name": "10/16/20",
+						"type": "String"
+					},
+					{
+						"name": "10/17/20",
+						"type": "String"
+					},
+					{
+						"name": "10/18/20",
+						"type": "String"
+					},
+					{
+						"name": "10/19/20",
+						"type": "String"
+					},
+					{
+						"name": "10/20/20",
+						"type": "String"
+					},
+					{
+						"name": "10/21/20",
+						"type": "String"
+					},
+					{
+						"name": "10/22/20",
+						"type": "String"
+					},
+					{
+						"name": "10/23/20",
+						"type": "String"
+					},
+					{
+						"name": "10/24/20",
+						"type": "String"
+					},
+					{
+						"name": "10/25/20",
+						"type": "String"
+					},
+					{
+						"name": "10/26/20",
+						"type": "String"
+					},
+					{
+						"name": "10/27/20",
+						"type": "String"
+					},
+					{
+						"name": "10/28/20",
+						"type": "String"
+					},
+					{
+						"name": "10/29/20",
+						"type": "String"
+					},
+					{
+						"name": "10/30/20",
+						"type": "String"
+					},
+					{
+						"name": "10/31/20",
+						"type": "String"
+					},
+					{
+						"name": "11/1/20",
+						"type": "String"
+					},
+					{
+						"name": "11/2/20",
+						"type": "String"
+					},
+					{
+						"name": "11/3/20",
+						"type": "String"
+					},
+					{
+						"name": "11/4/20",
+						"type": "String"
+					},
+					{
+						"name": "11/5/20",
+						"type": "String"
+					},
+					{
+						"name": "11/6/20",
+						"type": "String"
+					},
+					{
+						"name": "11/7/20",
+						"type": "String"
+					},
+					{
+						"name": "11/8/20",
+						"type": "String"
+					},
+					{
+						"name": "11/9/20",
+						"type": "String"
+					},
+					{
+						"name": "11/10/20",
+						"type": "String"
+					},
+					{
+						"name": "11/11/20",
+						"type": "String"
+					},
+					{
+						"name": "11/12/20",
+						"type": "String"
+					},
+					{
+						"name": "11/13/20",
+						"type": "String"
+					},
+					{
+						"name": "11/14/20",
+						"type": "String"
+					},
+					{
+						"name": "11/15/20",
+						"type": "String"
+					},
+					{
+						"name": "11/16/20",
+						"type": "String"
+					},
+					{
+						"name": "11/17/20",
+						"type": "String"
+					},
+					{
+						"name": "11/18/20",
+						"type": "String"
+					},
+					{
+						"name": "11/19/20",
+						"type": "String"
+					},
+					{
+						"name": "11/20/20",
+						"type": "String"
+					},
+					{
+						"name": "11/21/20",
+						"type": "String"
+					},
+					{
+						"name": "11/22/20",
+						"type": "String"
+					},
+					{
+						"name": "11/23/20",
+						"type": "String"
+					},
+					{
+						"name": "11/24/20",
+						"type": "String"
+					},
+					{
+						"name": "11/25/20",
+						"type": "String"
+					},
+					{
+						"name": "11/26/20",
+						"type": "String"
+					},
+					{
+						"name": "11/27/20",
+						"type": "String"
+					},
+					{
+						"name": "11/28/20",
+						"type": "String"
+					},
+					{
+						"name": "11/29/20",
+						"type": "String"
+					},
+					{
+						"name": "11/30/20",
+						"type": "String"
+					},
+					{
+						"name": "12/1/20",
+						"type": "String"
+					},
+					{
+						"name": "12/2/20",
+						"type": "String"
+					},
+					{
+						"name": "12/3/20",
+						"type": "String"
+					},
+					{
+						"name": "12/4/20",
+						"type": "String"
+					},
+					{
+						"name": "12/5/20",
+						"type": "String"
+					},
+					{
+						"name": "12/6/20",
+						"type": "String"
+					},
+					{
+						"name": "12/7/20",
+						"type": "String"
+					},
+					{
+						"name": "12/8/20",
+						"type": "String"
+					},
+					{
+						"name": "12/9/20",
+						"type": "String"
+					},
+					{
+						"name": "12/10/20",
+						"type": "String"
+					},
+					{
+						"name": "12/11/20",
+						"type": "String"
+					},
+					{
+						"name": "12/12/20",
+						"type": "String"
+					},
+					{
+						"name": "12/13/20",
+						"type": "String"
+					},
+					{
+						"name": "12/14/20",
+						"type": "String"
+					},
+					{
+						"name": "12/15/20",
+						"type": "String"
+					},
+					{
+						"name": "12/16/20",
+						"type": "String"
+					},
+					{
+						"name": "12/17/20",
+						"type": "String"
+					},
+					{
+						"name": "12/18/20",
+						"type": "String"
+					},
+					{
+						"name": "12/19/20",
+						"type": "String"
+					},
+					{
+						"name": "12/20/20",
+						"type": "String"
+					},
+					{
+						"name": "12/21/20",
+						"type": "String"
+					},
+					{
+						"name": "12/22/20",
+						"type": "String"
+					},
+					{
+						"name": "12/23/20",
+						"type": "String"
+					},
+					{
+						"name": "12/24/20",
+						"type": "String"
+					},
+					{
+						"name": "12/25/20",
+						"type": "String"
+					},
+					{
+						"name": "12/26/20",
+						"type": "String"
+					},
+					{
+						"name": "12/27/20",
+						"type": "String"
+					},
+					{
+						"name": "12/28/20",
+						"type": "String"
+					},
+					{
+						"name": "12/29/20",
+						"type": "String"
+					},
+					{
+						"name": "12/30/20",
+						"type": "String"
+					},
+					{
+						"name": "12/31/20",
+						"type": "String"
+					},
+					{
+						"name": "1/1/21",
+						"type": "String"
+					},
+					{
+						"name": "1/2/21",
+						"type": "String"
+					},
+					{
+						"name": "1/3/21",
+						"type": "String"
+					},
+					{
+						"name": "1/4/21",
+						"type": "String"
+					},
+					{
+						"name": "1/5/21",
+						"type": "String"
+					},
+					{
+						"name": "1/6/21",
+						"type": "String"
+					},
+					{
+						"name": "1/7/21",
+						"type": "String"
+					},
+					{
+						"name": "1/8/21",
+						"type": "String"
+					},
+					{
+						"name": "1/9/21",
+						"type": "String"
+					},
+					{
+						"name": "1/10/21",
+						"type": "String"
+					},
+					{
+						"name": "1/11/21",
+						"type": "String"
+					},
+					{
+						"name": "1/12/21",
+						"type": "String"
+					},
+					{
+						"name": "1/13/21",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/CnxLocalFile')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SrcRecoveredGlobal')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "CnxLocalFile",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "Sources"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "FileServerLocation",
+						"fileName": "time_series_covid19_recovered_global.csv",
+						"folderPath": "hopkins"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "Province/State",
+						"type": "String"
+					},
+					{
+						"name": "Country/Region",
+						"type": "String"
+					},
+					{
+						"name": "Lat",
+						"type": "String"
+					},
+					{
+						"name": "Long",
+						"type": "String"
+					},
+					{
+						"name": "1/22/20",
+						"type": "String"
+					},
+					{
+						"name": "1/23/20",
+						"type": "String"
+					},
+					{
+						"name": "1/24/20",
+						"type": "String"
+					},
+					{
+						"name": "1/25/20",
+						"type": "String"
+					},
+					{
+						"name": "1/26/20",
+						"type": "String"
+					},
+					{
+						"name": "1/27/20",
+						"type": "String"
+					},
+					{
+						"name": "1/28/20",
+						"type": "String"
+					},
+					{
+						"name": "1/29/20",
+						"type": "String"
+					},
+					{
+						"name": "1/30/20",
+						"type": "String"
+					},
+					{
+						"name": "1/31/20",
+						"type": "String"
+					},
+					{
+						"name": "2/1/20",
+						"type": "String"
+					},
+					{
+						"name": "2/2/20",
+						"type": "String"
+					},
+					{
+						"name": "2/3/20",
+						"type": "String"
+					},
+					{
+						"name": "2/4/20",
+						"type": "String"
+					},
+					{
+						"name": "2/5/20",
+						"type": "String"
+					},
+					{
+						"name": "2/6/20",
+						"type": "String"
+					},
+					{
+						"name": "2/7/20",
+						"type": "String"
+					},
+					{
+						"name": "2/8/20",
+						"type": "String"
+					},
+					{
+						"name": "2/9/20",
+						"type": "String"
+					},
+					{
+						"name": "2/10/20",
+						"type": "String"
+					},
+					{
+						"name": "2/11/20",
+						"type": "String"
+					},
+					{
+						"name": "2/12/20",
+						"type": "String"
+					},
+					{
+						"name": "2/13/20",
+						"type": "String"
+					},
+					{
+						"name": "2/14/20",
+						"type": "String"
+					},
+					{
+						"name": "2/15/20",
+						"type": "String"
+					},
+					{
+						"name": "2/16/20",
+						"type": "String"
+					},
+					{
+						"name": "2/17/20",
+						"type": "String"
+					},
+					{
+						"name": "2/18/20",
+						"type": "String"
+					},
+					{
+						"name": "2/19/20",
+						"type": "String"
+					},
+					{
+						"name": "2/20/20",
+						"type": "String"
+					},
+					{
+						"name": "2/21/20",
+						"type": "String"
+					},
+					{
+						"name": "2/22/20",
+						"type": "String"
+					},
+					{
+						"name": "2/23/20",
+						"type": "String"
+					},
+					{
+						"name": "2/24/20",
+						"type": "String"
+					},
+					{
+						"name": "2/25/20",
+						"type": "String"
+					},
+					{
+						"name": "2/26/20",
+						"type": "String"
+					},
+					{
+						"name": "2/27/20",
+						"type": "String"
+					},
+					{
+						"name": "2/28/20",
+						"type": "String"
+					},
+					{
+						"name": "2/29/20",
+						"type": "String"
+					},
+					{
+						"name": "3/1/20",
+						"type": "String"
+					},
+					{
+						"name": "3/2/20",
+						"type": "String"
+					},
+					{
+						"name": "3/3/20",
+						"type": "String"
+					},
+					{
+						"name": "3/4/20",
+						"type": "String"
+					},
+					{
+						"name": "3/5/20",
+						"type": "String"
+					},
+					{
+						"name": "3/6/20",
+						"type": "String"
+					},
+					{
+						"name": "3/7/20",
+						"type": "String"
+					},
+					{
+						"name": "3/8/20",
+						"type": "String"
+					},
+					{
+						"name": "3/9/20",
+						"type": "String"
+					},
+					{
+						"name": "3/10/20",
+						"type": "String"
+					},
+					{
+						"name": "3/11/20",
+						"type": "String"
+					},
+					{
+						"name": "3/12/20",
+						"type": "String"
+					},
+					{
+						"name": "3/13/20",
+						"type": "String"
+					},
+					{
+						"name": "3/14/20",
+						"type": "String"
+					},
+					{
+						"name": "3/15/20",
+						"type": "String"
+					},
+					{
+						"name": "3/16/20",
+						"type": "String"
+					},
+					{
+						"name": "3/17/20",
+						"type": "String"
+					},
+					{
+						"name": "3/18/20",
+						"type": "String"
+					},
+					{
+						"name": "3/19/20",
+						"type": "String"
+					},
+					{
+						"name": "3/20/20",
+						"type": "String"
+					},
+					{
+						"name": "3/21/20",
+						"type": "String"
+					},
+					{
+						"name": "3/22/20",
+						"type": "String"
+					},
+					{
+						"name": "3/23/20",
+						"type": "String"
+					},
+					{
+						"name": "3/24/20",
+						"type": "String"
+					},
+					{
+						"name": "3/25/20",
+						"type": "String"
+					},
+					{
+						"name": "3/26/20",
+						"type": "String"
+					},
+					{
+						"name": "3/27/20",
+						"type": "String"
+					},
+					{
+						"name": "3/28/20",
+						"type": "String"
+					},
+					{
+						"name": "3/29/20",
+						"type": "String"
+					},
+					{
+						"name": "3/30/20",
+						"type": "String"
+					},
+					{
+						"name": "3/31/20",
+						"type": "String"
+					},
+					{
+						"name": "4/1/20",
+						"type": "String"
+					},
+					{
+						"name": "4/2/20",
+						"type": "String"
+					},
+					{
+						"name": "4/3/20",
+						"type": "String"
+					},
+					{
+						"name": "4/4/20",
+						"type": "String"
+					},
+					{
+						"name": "4/5/20",
+						"type": "String"
+					},
+					{
+						"name": "4/6/20",
+						"type": "String"
+					},
+					{
+						"name": "4/7/20",
+						"type": "String"
+					},
+					{
+						"name": "4/8/20",
+						"type": "String"
+					},
+					{
+						"name": "4/9/20",
+						"type": "String"
+					},
+					{
+						"name": "4/10/20",
+						"type": "String"
+					},
+					{
+						"name": "4/11/20",
+						"type": "String"
+					},
+					{
+						"name": "4/12/20",
+						"type": "String"
+					},
+					{
+						"name": "4/13/20",
+						"type": "String"
+					},
+					{
+						"name": "4/14/20",
+						"type": "String"
+					},
+					{
+						"name": "4/15/20",
+						"type": "String"
+					},
+					{
+						"name": "4/16/20",
+						"type": "String"
+					},
+					{
+						"name": "4/17/20",
+						"type": "String"
+					},
+					{
+						"name": "4/18/20",
+						"type": "String"
+					},
+					{
+						"name": "4/19/20",
+						"type": "String"
+					},
+					{
+						"name": "4/20/20",
+						"type": "String"
+					},
+					{
+						"name": "4/21/20",
+						"type": "String"
+					},
+					{
+						"name": "4/22/20",
+						"type": "String"
+					},
+					{
+						"name": "4/23/20",
+						"type": "String"
+					},
+					{
+						"name": "4/24/20",
+						"type": "String"
+					},
+					{
+						"name": "4/25/20",
+						"type": "String"
+					},
+					{
+						"name": "4/26/20",
+						"type": "String"
+					},
+					{
+						"name": "4/27/20",
+						"type": "String"
+					},
+					{
+						"name": "4/28/20",
+						"type": "String"
+					},
+					{
+						"name": "4/29/20",
+						"type": "String"
+					},
+					{
+						"name": "4/30/20",
+						"type": "String"
+					},
+					{
+						"name": "5/1/20",
+						"type": "String"
+					},
+					{
+						"name": "5/2/20",
+						"type": "String"
+					},
+					{
+						"name": "5/3/20",
+						"type": "String"
+					},
+					{
+						"name": "5/4/20",
+						"type": "String"
+					},
+					{
+						"name": "5/5/20",
+						"type": "String"
+					},
+					{
+						"name": "5/6/20",
+						"type": "String"
+					},
+					{
+						"name": "5/7/20",
+						"type": "String"
+					},
+					{
+						"name": "5/8/20",
+						"type": "String"
+					},
+					{
+						"name": "5/9/20",
+						"type": "String"
+					},
+					{
+						"name": "5/10/20",
+						"type": "String"
+					},
+					{
+						"name": "5/11/20",
+						"type": "String"
+					},
+					{
+						"name": "5/12/20",
+						"type": "String"
+					},
+					{
+						"name": "5/13/20",
+						"type": "String"
+					},
+					{
+						"name": "5/14/20",
+						"type": "String"
+					},
+					{
+						"name": "5/15/20",
+						"type": "String"
+					},
+					{
+						"name": "5/16/20",
+						"type": "String"
+					},
+					{
+						"name": "5/17/20",
+						"type": "String"
+					},
+					{
+						"name": "5/18/20",
+						"type": "String"
+					},
+					{
+						"name": "5/19/20",
+						"type": "String"
+					},
+					{
+						"name": "5/20/20",
+						"type": "String"
+					},
+					{
+						"name": "5/21/20",
+						"type": "String"
+					},
+					{
+						"name": "5/22/20",
+						"type": "String"
+					},
+					{
+						"name": "5/23/20",
+						"type": "String"
+					},
+					{
+						"name": "5/24/20",
+						"type": "String"
+					},
+					{
+						"name": "5/25/20",
+						"type": "String"
+					},
+					{
+						"name": "5/26/20",
+						"type": "String"
+					},
+					{
+						"name": "5/27/20",
+						"type": "String"
+					},
+					{
+						"name": "5/28/20",
+						"type": "String"
+					},
+					{
+						"name": "5/29/20",
+						"type": "String"
+					},
+					{
+						"name": "5/30/20",
+						"type": "String"
+					},
+					{
+						"name": "5/31/20",
+						"type": "String"
+					},
+					{
+						"name": "6/1/20",
+						"type": "String"
+					},
+					{
+						"name": "6/2/20",
+						"type": "String"
+					},
+					{
+						"name": "6/3/20",
+						"type": "String"
+					},
+					{
+						"name": "6/4/20",
+						"type": "String"
+					},
+					{
+						"name": "6/5/20",
+						"type": "String"
+					},
+					{
+						"name": "6/6/20",
+						"type": "String"
+					},
+					{
+						"name": "6/7/20",
+						"type": "String"
+					},
+					{
+						"name": "6/8/20",
+						"type": "String"
+					},
+					{
+						"name": "6/9/20",
+						"type": "String"
+					},
+					{
+						"name": "6/10/20",
+						"type": "String"
+					},
+					{
+						"name": "6/11/20",
+						"type": "String"
+					},
+					{
+						"name": "6/12/20",
+						"type": "String"
+					},
+					{
+						"name": "6/13/20",
+						"type": "String"
+					},
+					{
+						"name": "6/14/20",
+						"type": "String"
+					},
+					{
+						"name": "6/15/20",
+						"type": "String"
+					},
+					{
+						"name": "6/16/20",
+						"type": "String"
+					},
+					{
+						"name": "6/17/20",
+						"type": "String"
+					},
+					{
+						"name": "6/18/20",
+						"type": "String"
+					},
+					{
+						"name": "6/19/20",
+						"type": "String"
+					},
+					{
+						"name": "6/20/20",
+						"type": "String"
+					},
+					{
+						"name": "6/21/20",
+						"type": "String"
+					},
+					{
+						"name": "6/22/20",
+						"type": "String"
+					},
+					{
+						"name": "6/23/20",
+						"type": "String"
+					},
+					{
+						"name": "6/24/20",
+						"type": "String"
+					},
+					{
+						"name": "6/25/20",
+						"type": "String"
+					},
+					{
+						"name": "6/26/20",
+						"type": "String"
+					},
+					{
+						"name": "6/27/20",
+						"type": "String"
+					},
+					{
+						"name": "6/28/20",
+						"type": "String"
+					},
+					{
+						"name": "6/29/20",
+						"type": "String"
+					},
+					{
+						"name": "6/30/20",
+						"type": "String"
+					},
+					{
+						"name": "7/1/20",
+						"type": "String"
+					},
+					{
+						"name": "7/2/20",
+						"type": "String"
+					},
+					{
+						"name": "7/3/20",
+						"type": "String"
+					},
+					{
+						"name": "7/4/20",
+						"type": "String"
+					},
+					{
+						"name": "7/5/20",
+						"type": "String"
+					},
+					{
+						"name": "7/6/20",
+						"type": "String"
+					},
+					{
+						"name": "7/7/20",
+						"type": "String"
+					},
+					{
+						"name": "7/8/20",
+						"type": "String"
+					},
+					{
+						"name": "7/9/20",
+						"type": "String"
+					},
+					{
+						"name": "7/10/20",
+						"type": "String"
+					},
+					{
+						"name": "7/11/20",
+						"type": "String"
+					},
+					{
+						"name": "7/12/20",
+						"type": "String"
+					},
+					{
+						"name": "7/13/20",
+						"type": "String"
+					},
+					{
+						"name": "7/14/20",
+						"type": "String"
+					},
+					{
+						"name": "7/15/20",
+						"type": "String"
+					},
+					{
+						"name": "7/16/20",
+						"type": "String"
+					},
+					{
+						"name": "7/17/20",
+						"type": "String"
+					},
+					{
+						"name": "7/18/20",
+						"type": "String"
+					},
+					{
+						"name": "7/19/20",
+						"type": "String"
+					},
+					{
+						"name": "7/20/20",
+						"type": "String"
+					},
+					{
+						"name": "7/21/20",
+						"type": "String"
+					},
+					{
+						"name": "7/22/20",
+						"type": "String"
+					},
+					{
+						"name": "7/23/20",
+						"type": "String"
+					},
+					{
+						"name": "7/24/20",
+						"type": "String"
+					},
+					{
+						"name": "7/25/20",
+						"type": "String"
+					},
+					{
+						"name": "7/26/20",
+						"type": "String"
+					},
+					{
+						"name": "7/27/20",
+						"type": "String"
+					},
+					{
+						"name": "7/28/20",
+						"type": "String"
+					},
+					{
+						"name": "7/29/20",
+						"type": "String"
+					},
+					{
+						"name": "7/30/20",
+						"type": "String"
+					},
+					{
+						"name": "7/31/20",
+						"type": "String"
+					},
+					{
+						"name": "8/1/20",
+						"type": "String"
+					},
+					{
+						"name": "8/2/20",
+						"type": "String"
+					},
+					{
+						"name": "8/3/20",
+						"type": "String"
+					},
+					{
+						"name": "8/4/20",
+						"type": "String"
+					},
+					{
+						"name": "8/5/20",
+						"type": "String"
+					},
+					{
+						"name": "8/6/20",
+						"type": "String"
+					},
+					{
+						"name": "8/7/20",
+						"type": "String"
+					},
+					{
+						"name": "8/8/20",
+						"type": "String"
+					},
+					{
+						"name": "8/9/20",
+						"type": "String"
+					},
+					{
+						"name": "8/10/20",
+						"type": "String"
+					},
+					{
+						"name": "8/11/20",
+						"type": "String"
+					},
+					{
+						"name": "8/12/20",
+						"type": "String"
+					},
+					{
+						"name": "8/13/20",
+						"type": "String"
+					},
+					{
+						"name": "8/14/20",
+						"type": "String"
+					},
+					{
+						"name": "8/15/20",
+						"type": "String"
+					},
+					{
+						"name": "8/16/20",
+						"type": "String"
+					},
+					{
+						"name": "8/17/20",
+						"type": "String"
+					},
+					{
+						"name": "8/18/20",
+						"type": "String"
+					},
+					{
+						"name": "8/19/20",
+						"type": "String"
+					},
+					{
+						"name": "8/20/20",
+						"type": "String"
+					},
+					{
+						"name": "8/21/20",
+						"type": "String"
+					},
+					{
+						"name": "8/22/20",
+						"type": "String"
+					},
+					{
+						"name": "8/23/20",
+						"type": "String"
+					},
+					{
+						"name": "8/24/20",
+						"type": "String"
+					},
+					{
+						"name": "8/25/20",
+						"type": "String"
+					},
+					{
+						"name": "8/26/20",
+						"type": "String"
+					},
+					{
+						"name": "8/27/20",
+						"type": "String"
+					},
+					{
+						"name": "8/28/20",
+						"type": "String"
+					},
+					{
+						"name": "8/29/20",
+						"type": "String"
+					},
+					{
+						"name": "8/30/20",
+						"type": "String"
+					},
+					{
+						"name": "8/31/20",
+						"type": "String"
+					},
+					{
+						"name": "9/1/20",
+						"type": "String"
+					},
+					{
+						"name": "9/2/20",
+						"type": "String"
+					},
+					{
+						"name": "9/3/20",
+						"type": "String"
+					},
+					{
+						"name": "9/4/20",
+						"type": "String"
+					},
+					{
+						"name": "9/5/20",
+						"type": "String"
+					},
+					{
+						"name": "9/6/20",
+						"type": "String"
+					},
+					{
+						"name": "9/7/20",
+						"type": "String"
+					},
+					{
+						"name": "9/8/20",
+						"type": "String"
+					},
+					{
+						"name": "9/9/20",
+						"type": "String"
+					},
+					{
+						"name": "9/10/20",
+						"type": "String"
+					},
+					{
+						"name": "9/11/20",
+						"type": "String"
+					},
+					{
+						"name": "9/12/20",
+						"type": "String"
+					},
+					{
+						"name": "9/13/20",
+						"type": "String"
+					},
+					{
+						"name": "9/14/20",
+						"type": "String"
+					},
+					{
+						"name": "9/15/20",
+						"type": "String"
+					},
+					{
+						"name": "9/16/20",
+						"type": "String"
+					},
+					{
+						"name": "9/17/20",
+						"type": "String"
+					},
+					{
+						"name": "9/18/20",
+						"type": "String"
+					},
+					{
+						"name": "9/19/20",
+						"type": "String"
+					},
+					{
+						"name": "9/20/20",
+						"type": "String"
+					},
+					{
+						"name": "9/21/20",
+						"type": "String"
+					},
+					{
+						"name": "9/22/20",
+						"type": "String"
+					},
+					{
+						"name": "9/23/20",
+						"type": "String"
+					},
+					{
+						"name": "9/24/20",
+						"type": "String"
+					},
+					{
+						"name": "9/25/20",
+						"type": "String"
+					},
+					{
+						"name": "9/26/20",
+						"type": "String"
+					},
+					{
+						"name": "9/27/20",
+						"type": "String"
+					},
+					{
+						"name": "9/28/20",
+						"type": "String"
+					},
+					{
+						"name": "9/29/20",
+						"type": "String"
+					},
+					{
+						"name": "9/30/20",
+						"type": "String"
+					},
+					{
+						"name": "10/1/20",
+						"type": "String"
+					},
+					{
+						"name": "10/2/20",
+						"type": "String"
+					},
+					{
+						"name": "10/3/20",
+						"type": "String"
+					},
+					{
+						"name": "10/4/20",
+						"type": "String"
+					},
+					{
+						"name": "10/5/20",
+						"type": "String"
+					},
+					{
+						"name": "10/6/20",
+						"type": "String"
+					},
+					{
+						"name": "10/7/20",
+						"type": "String"
+					},
+					{
+						"name": "10/8/20",
+						"type": "String"
+					},
+					{
+						"name": "10/9/20",
+						"type": "String"
+					},
+					{
+						"name": "10/10/20",
+						"type": "String"
+					},
+					{
+						"name": "10/11/20",
+						"type": "String"
+					},
+					{
+						"name": "10/12/20",
+						"type": "String"
+					},
+					{
+						"name": "10/13/20",
+						"type": "String"
+					},
+					{
+						"name": "10/14/20",
+						"type": "String"
+					},
+					{
+						"name": "10/15/20",
+						"type": "String"
+					},
+					{
+						"name": "10/16/20",
+						"type": "String"
+					},
+					{
+						"name": "10/17/20",
+						"type": "String"
+					},
+					{
+						"name": "10/18/20",
+						"type": "String"
+					},
+					{
+						"name": "10/19/20",
+						"type": "String"
+					},
+					{
+						"name": "10/20/20",
+						"type": "String"
+					},
+					{
+						"name": "10/21/20",
+						"type": "String"
+					},
+					{
+						"name": "10/22/20",
+						"type": "String"
+					},
+					{
+						"name": "10/23/20",
+						"type": "String"
+					},
+					{
+						"name": "10/24/20",
+						"type": "String"
+					},
+					{
+						"name": "10/25/20",
+						"type": "String"
+					},
+					{
+						"name": "10/26/20",
+						"type": "String"
+					},
+					{
+						"name": "10/27/20",
+						"type": "String"
+					},
+					{
+						"name": "10/28/20",
+						"type": "String"
+					},
+					{
+						"name": "10/29/20",
+						"type": "String"
+					},
+					{
+						"name": "10/30/20",
+						"type": "String"
+					},
+					{
+						"name": "10/31/20",
+						"type": "String"
+					},
+					{
+						"name": "11/1/20",
+						"type": "String"
+					},
+					{
+						"name": "11/2/20",
+						"type": "String"
+					},
+					{
+						"name": "11/3/20",
+						"type": "String"
+					},
+					{
+						"name": "11/4/20",
+						"type": "String"
+					},
+					{
+						"name": "11/5/20",
+						"type": "String"
+					},
+					{
+						"name": "11/6/20",
+						"type": "String"
+					},
+					{
+						"name": "11/7/20",
+						"type": "String"
+					},
+					{
+						"name": "11/8/20",
+						"type": "String"
+					},
+					{
+						"name": "11/9/20",
+						"type": "String"
+					},
+					{
+						"name": "11/10/20",
+						"type": "String"
+					},
+					{
+						"name": "11/11/20",
+						"type": "String"
+					},
+					{
+						"name": "11/12/20",
+						"type": "String"
+					},
+					{
+						"name": "11/13/20",
+						"type": "String"
+					},
+					{
+						"name": "11/14/20",
+						"type": "String"
+					},
+					{
+						"name": "11/15/20",
+						"type": "String"
+					},
+					{
+						"name": "11/16/20",
+						"type": "String"
+					},
+					{
+						"name": "11/17/20",
+						"type": "String"
+					},
+					{
+						"name": "11/18/20",
+						"type": "String"
+					},
+					{
+						"name": "11/19/20",
+						"type": "String"
+					},
+					{
+						"name": "11/20/20",
+						"type": "String"
+					},
+					{
+						"name": "11/21/20",
+						"type": "String"
+					},
+					{
+						"name": "11/22/20",
+						"type": "String"
+					},
+					{
+						"name": "11/23/20",
+						"type": "String"
+					},
+					{
+						"name": "11/24/20",
+						"type": "String"
+					},
+					{
+						"name": "11/25/20",
+						"type": "String"
+					},
+					{
+						"name": "11/26/20",
+						"type": "String"
+					},
+					{
+						"name": "11/27/20",
+						"type": "String"
+					},
+					{
+						"name": "11/28/20",
+						"type": "String"
+					},
+					{
+						"name": "11/29/20",
+						"type": "String"
+					},
+					{
+						"name": "11/30/20",
+						"type": "String"
+					},
+					{
+						"name": "12/1/20",
+						"type": "String"
+					},
+					{
+						"name": "12/2/20",
+						"type": "String"
+					},
+					{
+						"name": "12/3/20",
+						"type": "String"
+					},
+					{
+						"name": "12/4/20",
+						"type": "String"
+					},
+					{
+						"name": "12/5/20",
+						"type": "String"
+					},
+					{
+						"name": "12/6/20",
+						"type": "String"
+					},
+					{
+						"name": "12/7/20",
+						"type": "String"
+					},
+					{
+						"name": "12/8/20",
+						"type": "String"
+					},
+					{
+						"name": "12/9/20",
+						"type": "String"
+					},
+					{
+						"name": "12/10/20",
+						"type": "String"
+					},
+					{
+						"name": "12/11/20",
+						"type": "String"
+					},
+					{
+						"name": "12/12/20",
+						"type": "String"
+					},
+					{
+						"name": "12/13/20",
+						"type": "String"
+					},
+					{
+						"name": "12/14/20",
+						"type": "String"
+					},
+					{
+						"name": "12/15/20",
+						"type": "String"
+					},
+					{
+						"name": "12/16/20",
+						"type": "String"
+					},
+					{
+						"name": "12/17/20",
+						"type": "String"
+					},
+					{
+						"name": "12/18/20",
+						"type": "String"
+					},
+					{
+						"name": "12/19/20",
+						"type": "String"
+					},
+					{
+						"name": "12/20/20",
+						"type": "String"
+					},
+					{
+						"name": "12/21/20",
+						"type": "String"
+					},
+					{
+						"name": "12/22/20",
+						"type": "String"
+					},
+					{
+						"name": "12/23/20",
+						"type": "String"
+					},
+					{
+						"name": "12/24/20",
+						"type": "String"
+					},
+					{
+						"name": "12/25/20",
+						"type": "String"
+					},
+					{
+						"name": "12/26/20",
+						"type": "String"
+					},
+					{
+						"name": "12/27/20",
+						"type": "String"
+					},
+					{
+						"name": "12/28/20",
+						"type": "String"
+					},
+					{
+						"name": "12/29/20",
+						"type": "String"
+					},
+					{
+						"name": "12/30/20",
+						"type": "String"
+					},
+					{
+						"name": "12/31/20",
+						"type": "String"
+					},
+					{
+						"name": "1/1/21",
+						"type": "String"
+					},
+					{
+						"name": "1/2/21",
+						"type": "String"
+					},
+					{
+						"name": "1/3/21",
+						"type": "String"
+					},
+					{
+						"name": "1/4/21",
+						"type": "String"
+					},
+					{
+						"name": "1/5/21",
+						"type": "String"
+					},
+					{
+						"name": "1/6/21",
+						"type": "String"
+					},
+					{
+						"name": "1/7/21",
+						"type": "String"
+					},
+					{
+						"name": "1/8/21",
+						"type": "String"
+					},
+					{
+						"name": "1/9/21",
+						"type": "String"
+					},
+					{
+						"name": "1/10/21",
+						"type": "String"
+					},
+					{
+						"name": "1/11/21",
+						"type": "String"
+					},
+					{
+						"name": "1/12/21",
+						"type": "String"
+					},
+					{
+						"name": "1/13/21",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/CnxLocalFile')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/Data Ingestion Europe')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
